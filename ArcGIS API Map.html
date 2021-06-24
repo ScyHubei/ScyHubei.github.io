@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+  <title>第三个作业</title>
+  <link rel="stylesheet" href="./css/divcss.css">
+  <link rel="stylesheet" href="https://js.arcgis.com/4.19/esri/themes/light/main.css" />
+  <script src="https://js.arcgis.com/4.19/"></script>
+</head>
+
+<body>
+  <div id="coordinates">
+    <script src="./js/Div.js"></script>
+  </div>
+  <div id="LayerList_Div">
+    <script src="./js/Arcgis_Map1.js"></script>
+    <script src="./js/Div.js"></script>
+    <fieldset style="height: 400px;">
+      <legend>BaseLayer</legend>
+      <p>
+        <input type="radio" name="BaseLayer" id="arcgis-topographic">
+        <img src="./img/topo.jpg">
+        Topographic
+      </p>
+      <p>
+        <input type="radio" name="BaseLayer" id="gray">
+        <img src="./img/gray.jpg">
+        Gray
+      </p>
+      <p>
+        <input type="radio" name="BaseLayer" id="streets">
+        <img src="./img/st.jpg">
+        Streets
+      </p>
+      <p>
+        <input type="radio" name="BaseLayer" id="hybrid">
+        <img src="./img/image.jpg">
+        Imagerys
+      </p>
+    </fieldset>
+    <fieldset>
+      <legend>FeatureLayer</legend>
+      <p>
+        <input type="text" id="_url">
+        <button onclick="FeatureLayerurl_onchange(this)">解析url</button>
+      </p>
+      <p>
+        <input type="checkbox" onclick="Earthquakes_onclick(this)">Earthquakes
+      </p>
+      <p>
+        <input type="checkbox" onclick="WorldCities_onclick(this)">World citys
+      </p>
+      <p>
+        <input type="checkbox" onclick="Chinaprovince_onclick(this)">China Province
+      </p>
+    </fieldset>
+  </div>
+  <div id="viewDiv"></div>
+  <div id="viewDiv2"></div>
+</body>
+
+</html>
